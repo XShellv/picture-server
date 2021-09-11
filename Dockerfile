@@ -1,6 +1,6 @@
 # Dockerfile 
 # 制定node镜像的版本 
-FROM node:10-alpine
+FROM node:12-alpine
 
 # 移动当前目录下面的文件到app目录下 
 ADD . /app/ 

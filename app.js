@@ -53,6 +53,7 @@ router.post("/upload", (ctx, next) => {
   render.pipe(upStream);
 
   // let address = os.networkInterfaces().WLAN[1].address;
+  console.log(os.networkInterfaces().WLAN)
   filePath = `http://127.0.0.1:${process.env.PORT}/${image_name}`;
 
   ctx.body = filePath;
