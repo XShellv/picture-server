@@ -7,7 +7,7 @@ services:
       #~/Documents/docker/test/nginx为本机目录, /etc/nginx为容器目录, port同理
       - ./nginx/conf.d/:/etc/nginx/conf.d
     ports:
-      - 8091:80
+      - 80:5000
     links:
       #建立连接,web容器就无需暴露端口出去
       - ps
