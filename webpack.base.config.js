@@ -5,7 +5,7 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "bundle"),
+    path: path.resolve(__dirname, "server/bundle"),
     filename: "[name].bundle.js",
     publicPath: "/",
   },

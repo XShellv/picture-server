@@ -11,7 +11,7 @@ const webpackConfigDev = {
     historyApiFallback: true,
     proxy: {
       "/upload": {
-        target: "http://localhost:8080",
+        target: "http://localhost:8000",
         changeOrigin: true,
         pathRewrite: {
           //   "^/upload": "",

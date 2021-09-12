@@ -8,8 +8,9 @@ const os = require("os");
 const koaStatic = require("koa-static");
 const app = new Koa();
 let dotenv = require("dotenv");
-dotenv.config("./env");
+dotenv.config({ path: path.resolve(__dirname, ".env") });
 const views = require("koa-views");
+console.log(process.env);
 
 app.use(koaStatic(path.resolve(__dirname, "images")));
 app.use(koaStatic(path.resolve(__dirname, "bundle")));
