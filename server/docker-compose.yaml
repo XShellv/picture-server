@@ -1,0 +1,22 @@
+version: "2"
+services:
+  nginx:
+    restart: always
+    image: nginx
+    volumes:
+      #~/Documents/docker/test/nginx为本机目录, /etc/nginx为容器目录, port同理
+      - ./nginx/conf.d/:/etc/nginx/conf.d
+    ports:
+      - 80:80
+    links:
+      #建立连接,web容器就无需暴露端口出去
+      - ps
+  ps:
+    #指定container的名称, 后续方便使用命令进入到容器内以及与nginx.conf相对应
+    container_name: ps
+    #构建容器
+    build: .
+    volumes:
+      - ../server:/usr/src/app
+    ports:
+      - "8000:8000"
